@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
     <style>
-        .container{
+        .container {
             margin: auto;
             width: 50%;
             padding: 30px;
@@ -13,12 +16,22 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1 data-th-text="${name}">Welcome to home</h1>
-        <p> Github Repo :- <a data-th-href="${github_repo}">Click Me</a> </p>
-       
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni soluta distinctio eum eos molestias itaque hic praesentium. Alias, et, adipisci nesciunt temporibus error libero repellat aliquid maxime placeat quibusdam, fugit rem. Et vero similique nisi, ea error unde eveniet aliquam ipsam iusto necessitatibus! Eligendi beatae adipisci totam temporibus sit.</p>
+
+<body class="bg-gray-200 w-1/2 p-4 mx-auto">
+    <div class="divx2">
+        <p>hello</p>
     </div>
+    <div class="container">
+        <h1 class="text-2 font-bold" data-th-text="${name}">Welcome to home</h1>
+        <p class="text-2xl"> Github Repo :- <a data-th-href="${github_repo}">Click Me</a> </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni soluta distinctio eum eos molestias
+            itaque hic praesentium. Alias, et, adipisci nesciunt temporibus error libero repellat aliquid maxime placeat
+            quibusdam, fugit rem. Et vero similique nisi, ea error unde eveniet aliquam ipsam iusto necessitatibus!
+            Eligendi beatae adipisci totam temporibus sit.</p>
+        <div><button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Me</button></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
