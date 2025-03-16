@@ -1,4 +1,38 @@
-<div th:fragment="parent">
-    <h1>this is parent</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam pariatur reprehenderit nulla sapiente quidem, fugit magni repellat recusandae? Repellendus, ullam esse optio temporibus accusamus quos quae vel dicta tempora.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en" 
+th:fragment="parent(content,title,script)" 
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}">Base Page</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+</head>
+<body>
+    
+    <ul class="p-4">
+        <li>
+            <a data-th-href="@{'/home'}">Home</a>
+        </li>
+        <li>
+            <a data-th-href="@{'/services'}">Services</a>
+        </li>
+        <li>
+            <a data-th-href="@{'/about'}">About</a>
+        </li>
+    </ul>
+
+
+    <div class="p-4"> 
+        <section th:replace="${content}"></section>
+    </div>
+    <footer class="p-4">
+        Footer: Learn Code With Ansh
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <th:block data-th-replace="${script}"></th:block>
+</body>
+
+</html>
