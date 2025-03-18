@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" 
-th:fragment="parent(content,title,script)" 
-xmlns:th="http://www.thymeleaf.org">
+class="light" 
+th:fragment="parent(content,title,script)" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -10,22 +10,13 @@ xmlns:th="http://www.thymeleaf.org">
     <title data-th-replace="${title}">Base Page</title>
     <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
 </head>
-<body>
-    
-    <ul class="p-4">
-        <li>
-            <a data-th-href="@{'/home'}">Home</a>
-        </li>
-        <li>
-            <a data-th-href="@{'/services'}">Services</a>
-        </li>
-        <li>
-            <a data-th-href="@{'/about'}">About</a>
-        </li>
-    </ul>
 
+<body class="bg-white dark:bg-gray-900 dark:text-white">
+    <div th:replace="navbar :: navbar">
 
-    <div class="p-4"> 
+    </div>
+
+    <div class="p-4">
         <section th:replace="${content}"></section>
     </div>
     <footer class="p-4">

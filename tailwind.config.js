@@ -3,6 +3,6 @@ export default {
     theme :{
         extend:{},
     },
-    Plugin: [],
-    darkMode : "selector",
-}
+    Plugins: [],
+    darkMode: "selector",
+};

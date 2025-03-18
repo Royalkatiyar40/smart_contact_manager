@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 @Controller
@@ -29,4 +31,19 @@ public class PageController{
     public String servicesPage(){
         return"services";
     }
+    @RequestMapping("/contact")
+    public String contactPage(){
+        return"contact";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return new String("login");
+    }
+
+    @GetMapping("/register")
+    public String register(){
+        return"register";
+    }
+    
 }
