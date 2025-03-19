@@ -12,8 +12,8 @@ function changeTheme(){
     //set the listener to change theme button
     const changeThemeButton = document.querySelector("#theme_change_button");
   
-    const oldTheme = currentTheme;
     changeThemeButton.addEventListener("click", (event) => {
+      let oldTheme = currentTheme;
       console.log("change theme button clicked");
       if (currentTheme === "dark") {
         //theme ko light
@@ -41,7 +41,9 @@ function getTheme(){
 
 function changePageTheme(theme , oldTheme){
     setTheme(currentTheme);
-    document.querySelector("html").classList.remove(oldTheme);
+    if (oldTheme) {
+      document.querySelector("html").classList.remove(oldTheme);
+    }
     document.querySelector("html").classList.add(theme);
 
     document
