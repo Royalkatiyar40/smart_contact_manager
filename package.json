@@ -12,5 +12,8 @@
   "devDependencies": {
     "tailwindcss": "^4.0.14"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "bson": "^6.10.3"
+  }
 }
